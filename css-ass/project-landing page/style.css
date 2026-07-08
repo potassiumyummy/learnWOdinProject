@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.first{
+    padding-left: 20vh;
+    padding-right: 20vh;
+    padding-top: 10px;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1F2937;
+    gap: 10vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.innerContainer{
+    display: flex;
+    flex-grow: 1;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+p, li, .imageContainer{
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.logo{
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+.imageContainer{
+    width: auto;
+    height: auto;
+}
+
+.innerLeft{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.innerRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: gray;
+}
+
+.innerLeft h1,
+.innerLeft p {
+    margin: 0;
+}
+
+button{
+    background-color: #3882F6;
+    border-style: none;
+    color: white;
+    padding: 10px;
+    width: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.third{
+    background-color: #E5E7EB;
+}
+
+.emptyContainer{
+    width: 120px;
+    height: 120px;
+    border: 2px solid #3882F6;
+    border-radius: 10px;
+}
+
+ .second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 15vh;
+    gap: 49px;
+ }
+
+ .secondContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50vh;
+    padding-right: 50vh;
+}
+
+ .secondHeader{
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+ }
+
+ .content{
+    gap: 900px;
+    width: 120px;
+    height: 120px;
+ }
+
+ .label{
+    text-align: center;
+ }
