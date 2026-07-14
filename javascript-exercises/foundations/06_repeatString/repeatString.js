@@ -1,12 +1,12 @@
-const repeatString = function(input, rotation) {
-    if(rotation < 0){
+const repeatString = function(word, repetition) {
+    if(repetition < 0){
         return "ERROR";
     }else{
-        let string = "";
-        for(let i = 0; i < rotation; i++){
-            string += input;
+        let new_word = "";
+        for(let i = 0; i < repetition; i++){
+            new_word+=word;
         }
-        return string;
+        return new_word;     
     }
 };
 
