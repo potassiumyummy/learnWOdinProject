@@ -1,16 +1,47 @@
-function getComputerChoice(){
+const container = document.body;
+
+const userComputerContainer = document.createElement("div");
+container.appendChild(userComputerContainer);
+
+const computerbtn = document.createElement(`button`);
+computerbtn.textContent = "Generate Computer Choice";
+
+const userInput = document.createElement(`input`);
+
+const playGamebtn = document.createElement(`button`);
+playGamebtn.textContent = "Play Game";
+
+const computerChoiceField = document.createElement(`p`);
+userComputerContainer.appendChild(computerbtn);
+userComputerContainer.appendChild(userInput);
+userComputerContainer.appendChild(playGamebtn);
+userComputerContainer.appendChild(computerChoiceField);
+
+
+let humanScore = 0;
+let computerScore = 0;
+
+
+const getComputerChoice = () => {
     let computer = Math.floor(Math.random()*3);
     switch(computer){
         case 0:
             return "rock";
+            break;
         case 1:
             return "paper";
+            break;
         case 2:
             return "scissor";
+            break;
     }
-}
+};
 
-function getHumanChoice(){
+computerbtn.onclick = () => {
+    computerChoiceField.textContent = getComputerChoice();
+};
+ 
+const HumanChoice = () => {
     let user = prompt("Choose your fighter: ", "rock, paper, or scissor");
 
     if(user === null){
@@ -31,8 +62,7 @@ function getHumanChoice(){
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
+
 
 function playRound(humanChoice, computerChoice){
     if(humanChoice === computerChoice){
