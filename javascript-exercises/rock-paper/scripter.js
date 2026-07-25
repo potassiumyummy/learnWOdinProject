@@ -20,8 +20,6 @@ const resultsContainer = document.createElement("div");
 container.appendChild(resultsContainer);
 
 const getComputerChoice = () => {
-    // Math.random() generates a number between 0 and 0.999. 
-    // Multiplying by 3 and flooring gives us 0, 1, or 2.
     let computer = Math.floor(Math.random() * 3);
     switch(computer){
         case 0: return "rock";
