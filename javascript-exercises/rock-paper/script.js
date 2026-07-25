@@ -90,7 +90,7 @@ function playRound(humanChoice, computerChoice){
 }
 
 
-const playGame = () => {
+const playGamebtn = () => {
     for(let i = 0; i < 5; i++){
         console.log(`Round: ${i + 1}`);
 
