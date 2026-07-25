@@ -42,9 +42,9 @@ computerbtn.onclick = () => {
 };
  
 const HumanChoice = () => {
-    let user = prompt("Choose your fighter: ", "rock, paper, or scissor");
+    let user = userInput.value.trim();
 
-    if(user === null){
+    if(user === ""){
         return "Idiot you didn't put any answer in the input box! This nigga really getting into my nerve!";
     }
 
@@ -64,20 +64,28 @@ const HumanChoice = () => {
 
 
 
+
+
 function playRound(humanChoice, computerChoice){
+    const roundResults = document.createElement("div");
+    userComputerContainer.appendChild(roundResults);
+    const resultValue = document.createElement("p");
+    roundResults.appendChild(resultValue);
+
+
     if(humanChoice === computerChoice){
-        console.log(`Human: ${humanChoice} || Computer: ${computerChoice}`);
-        return "It's a fucking Tie!";
+        roundResults.textContent = `Human: ${humanChoice} || Computer: ${computerChoice}`;
+        resultValue.textContent = "It's a tie!";
     }else if((humanChoice === "rock" && computerChoice === "scissor") || (humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissor" && computerChoice === "paper")){
         humanScore++;
-        console.log(`Human: ${humanChoice} || Computer: ${computerChoice}`);
-        return "The retarded human won!";
+        roundResults.textContent = `Human: ${humanChoice} || Computer: ${computerChoice}`;
+        resultValue.textContent = "The Human won!";
     }else if(humanChoice === "invalid"){
         return "This dumbass can't even pick a right answer!";
     }else{
         computerScore++;
-        console.log(`Human: ${humanChoice} || Computer: ${computerChoice}`);
-        return "Computer defeated the dumbass stupid no-future good for nothing trash human!!!🎉🎉🎉";
+        roundResults.textContent = `Human: ${humanChoice} || Computer: ${computerChoice}`;
+        resultValue.textContent = "Computer defeated the dumbass stupid no-future good for nothing trash human!!!🎉🎉🎉";
     }
 }
 
