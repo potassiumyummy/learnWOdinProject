@@ -1,4 +1,4 @@
-const container = document.querySelector("container");
+const container = document.querySelector(".container");
 
 function add(num1, num2){
     return num1 + num2;
@@ -16,19 +16,23 @@ function divide(num1, num2){
 const operate = (num1, num2, operator) => {
     switch(operator){
         case '+':
-            add(num1, num2);
+            return add(num1, num2);
             break;
         case '-':
-            subtract(num1, num2);
+            return subtract(num1, num2);
             break;
         case '*':
-            multiply(num1, num2);
+            return multiply(num1, num2);
             break;
         case '/':
-            divide(num1, num2);
+            return divide(num1, num2);
             break;
         default:
             break;
     }
 };
 
+let num1 = Number(prompt("Insert Num1"));
+let num2 = Number(prompt("Insert Num2", ));
+let operator = prompt("Operation", );
+console.log(operate(num1, num2, operator));
